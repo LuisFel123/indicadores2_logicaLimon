@@ -15,50 +15,30 @@
 
 
 
-
             <h:form>
-                <h1><h:outputText value="Create/Edit"/></h1>
+                <h1><h:outputText value="Informacion usuario"/></h1>
                 <h:panelGrid columns="2">
-                    <h:outputLabel value="IdPersona:" for="idPersona" />
-                    <h:inputText id="idPersona" value="#{aPersona.perosna.idPersona}" title="IdPersona" required="true" requiredMessage="The IdPersona field is required."/>
-                    <h:outputLabel value="Usuario:" for="usuario" />
-                    <h:inputText id="usuario" value="#{aPersona.perosna.usuario}" title="Usuario" required="true" requiredMessage="The Usuario field is required."/>
-                    <h:outputLabel value="Password:" for="password" />
-                    <h:inputText id="password" value="#{aPersona.perosna.password}" title="Password" required="true" requiredMessage="The Password field is required."/>
-                    <h:outputLabel value="FechaNac:" for="fechaNac" />
-                    <h:inputText id="fechaNac" value="#{aPersona.perosna.fechaNac}" title="FechaNac" >
-                        <f:convertDateTime pattern="MM/dd/yyyy" />
-                    </h:inputText>
-                    <h:outputLabel value="Estatura:" for="estatura" />
-                    <h:inputText id="estatura" value="#{aPersona.perosna.estatura}" title="Estatura" />
-                    <h:outputLabel value="Genero:" for="genero" />
-                    <h:inputText id="genero" value="#{aPersona.perosna.genero}" title="Genero" />
-                    <h:outputLabel value="Nombre:" for="nombre" />
-                    <h:inputText id="nombre" value="#{aPersona.perosna.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
-                    <h:outputLabel value="Edad:" for="edad" />
-                    <h:inputText id="edad" value="#{aPersona.perosna.edad}" title="Edad" required="true" requiredMessage="The Edad field is required."/>
-                </h:panelGrid>
-            </h:form>
-
-            
-
-            <h:form>
-                <h1><h:outputText value="Informacion Usuario"/></h1>
-                <h:panelGrid columns="2">
-                    <h:outputText value="Nombre:"/>
-                    <h:outputText value="#{sessionScope['empleadoLogueado'].nombre}" title="Nombre"/>
+                    <h:outputText value="IdPersona:"/>
+                    <h:outputText value="#{aPersona.perosna.idPersona}" title="IdPersona"/>
+                    <h:outputText value="Usuario:"/>
+                    <h:outputText value="#{aPersona.perosna.usuario}" title="Usuario"/>
+                    <h:outputText value="Password:"/>
+                    <h:outputText value="#{aPersona.perosna.password}" title="Password"/>
                     <h:outputText value="FechaNac:"/>
-                    <h:outputText value="#{sessionScope['empleadoLogueado'].fechaNac}" title="FechaNac">
+                    <h:outputText value="#{aPersona.perosna.fechaNac}" title="FechaNac">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:outputText>
-                    <h:outputText value="Genero:"/>
-                    <h:outputText value="#{sessionScope['empleadoLogueado'].genero}" title="Genero"/>
                     <h:outputText value="Estatura:"/>
-                    <h:outputText value="#{sessionScope['empleadoLogueado'].estatura}" title="Estatura"/>
-
-
+                    <h:outputText value="#{aPersona.perosna.estatura}" title="Estatura"/>
+                    <h:outputText value="Genero:"/>
+                    <h:outputText value="#{aPersona.perosna.genero}" title="Genero"/>
+                    <h:outputText value="Nombre:"/>
+                    <h:outputText value="#{aPersona.perosna.nombre}" title="Nombre"/>
+                    <h:outputText value="Edad:"/>
+                    <h:outputText value="#{aPersona.perosna.edad}" title="Edad"/>
                 </h:panelGrid>
             </h:form>
+
 
 
 
@@ -110,7 +90,13 @@
             </p:card>
 
 
-            <p:card style="margin-top: 10em;">
+
+
+
+
+
+
+            <p:card style="margin-top: 15em;">
                 <h:form id="medidasT" >
                     <p:dataTable value="#{aMedida.filtrarMedidasPorId()}" var="item">
                         <f:facet name="header">
